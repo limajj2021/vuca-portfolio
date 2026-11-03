@@ -93,12 +93,12 @@
           p.works.length
             ? `<div class="works">${p.works
                 .map((w, i) => {
-                  const embed = igEmbed(w.url);
+                  const playable = w.video || igEmbed(w.url);
                   return `
-                <button class="work" type="button" data-i="${i}" ${embed ? "" : "disabled"}>
+                <button class="work" type="button" data-i="${i}" ${playable ? "" : "disabled"}>
                   <div class="work__thumb">
                     ${w.thumbnail ? `<img src="${esc(w.thumbnail)}" alt="" loading="lazy">` : ""}
-                    ${embed ? `<span class="play"></span>` : `<span class="work__soon">即將上架</span>`}
+                    ${playable ? `<span class="play"></span>` : `<span class="work__soon">即將上架</span>`}
                   </div>
                   <p class="work__title">${esc(w.title)}</p>
                 </button>`;
@@ -107,9 +107,11 @@
             : `<p class="empty">作品整理中。</p>`
         }
       </section>`;
-    app.querySelectorAll(".work:not([disabled])").forEach((btn) =>
-      btn.addEventListener("click", () => openPlayer(igEmbed(p.works[btn.dataset.i].url)))
-    );
+    app.querySelectorAll(".work:not([disabled])").forEach((btn) => {
+      const w = p.works[btn.dataset.i];
+      btn.addEventListener("click", () => openPlayer(w));
+      if (w.video && canHover) attachPreview(btn, w.video);
+    });
     setActive("home");
     document.title = `${p.name}｜${data.site.brand}`;
   }
@@ -135,9 +137,31 @@
     document.title = `合作洽詢｜${data.site.brand}`;
   }
 
-  function openPlayer(src) {
-    playerFrame.innerHTML = `<iframe src="${esc(src)}" allowfullscreen loading="lazy" title="作品播放"></iframe>`;
+  // 有自架影片就用原生播放器，否則退回 IG 官方嵌入
+  function openPlayer(w) {
+    playerFrame.innerHTML = w.video
+      ? `<video src="${esc(w.video)}" poster="${esc(w.thumbnail || "")}" controls autoplay playsinline></video>`
+      : `<iframe src="${esc(igEmbed(w.url))}" allowfullscreen loading="lazy" title="作品播放"></iframe>`;
     player.showModal();
+  }
+
+  // 桌機滑鼠移入時無聲預覽，移出即移除，避免同時載入多支影片
+  const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  function attachPreview(btn, src) {
+    const thumb = btn.querySelector(".work__thumb");
+    let timer, video;
+    btn.addEventListener("mouseenter", () => {
+      timer = setTimeout(() => {
+        video = Object.assign(document.createElement("video"), { src, muted: true, loop: true, playsInline: true, className: "work__preview" });
+        thumb.appendChild(video);
+        video.play().catch(() => {});
+      }, 250);
+    });
+    btn.addEventListener("mouseleave", () => {
+      clearTimeout(timer);
+      video?.remove();
+      video = null;
+    });
   }
   const closePlayer = () => {
     player.close();

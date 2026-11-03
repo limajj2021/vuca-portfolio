@@ -27,6 +27,7 @@
 | `slug` | 網址代號，英數與連字號，例：`#/p/wang-xiaoming` |
 | `photo` | 人物照，上傳到 `assets/people/`；留空則顯示名字縮寫 |
 | `works[].url` | IG 貼文／Reel 連結（`/p/`、`/reel/`、`/tv/` 皆可），點擊後以 IG 官方嵌入播放；留空顯示「即將上架」 |
+| `works[].video` | 自架影片路徑；有填就用網站原生播放器，沒填則退回 IG 嵌入 |
 | `works[].thumbnail` | 封面圖（選填），建議 4:5 直式 |
 | `stats` | 合作成果數字，值留空顯示「—」；整個物件刪掉則不顯示該區塊 |
 
@@ -41,8 +42,12 @@ python3 scripts/import_reels.py links.txt
 ```
 
 腳本只讀 IG 官方公開嵌入頁（不需登入），會依發文帳號自動分到對應人物（沒有就新建）、
-以說明文字第一行當標題、下載封面到 `assets/works/`。已匯入的作品會略過，可重複執行。
+以說明文字第一行當標題、下載封面到 `assets/works/`、影片壓成 720p 存到 `assets/videos/`（需要 ffmpeg）。已匯入的作品會略過，可重複執行。
 新建的人物 `name` 預設為 IG 帳號，請再手動改成中文名與介紹。
+
+### 容量
+
+GitHub Pages 網站上限 1GB。每支影片約 4–12MB，約可放 150 支；接近上限時把 `assets/videos/` 搬到 Cloudflare R2 等儲存空間，再把 `video` 欄位改成完整網址即可，前端不用改。
 
 ## 品牌
 
