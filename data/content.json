@@ -303,6 +303,12 @@
           "url": "https://www.instagram.com/reel/DPbDXpkCUMy/",
           "thumbnail": "assets/works/DPbDXpkCUMy.jpg",
           "video": "assets/videos/DPbDXpkCUMy.mp4"
+        },
+        {
+          "title": "念碩專班在「烙兄弟」？跨域合作真的能作伙接案",
+          "url": "https://www.instagram.com/reel/DS2OEI5Cd8_/",
+          "thumbnail": "assets/works/DS2OEI5Cd8_.jpg",
+          "video": "assets/videos/DS2OEI5Cd8_.mp4"
         }
       ]
     },
@@ -323,6 +329,18 @@
           "url": "https://www.instagram.com/reel/DcGMtjoRY7W/",
           "thumbnail": "assets/works/DcGMtjoRY7W.jpg",
           "video": "assets/videos/DcGMtjoRY7W.mp4"
+        },
+        {
+          "title": "果然第一則短影音還是得在熱炒店？",
+          "url": "https://www.instagram.com/reel/Db-fF5-uUol/",
+          "thumbnail": "assets/works/Db-fF5-uUol.jpg",
+          "video": "assets/videos/Db-fF5-uUol.mp4"
+        },
+        {
+          "title": "越早搞懂，後面差很多",
+          "url": "https://www.instagram.com/reel/DcTSSAHOIp_/",
+          "thumbnail": "assets/works/DcTSSAHOIp_.jpg",
+          "video": "assets/videos/DcTSSAHOIp_.mp4"
         }
       ]
     },
@@ -349,26 +367,6 @@
           "url": "https://www.instagram.com/reel/DQt7jQakyrj/",
           "thumbnail": "assets/works/DQt7jQakyrj.jpg",
           "video": "assets/videos/DQt7jQakyrj.mp4"
-        }
-      ]
-    },
-    {
-      "slug": "coach_please",
-      "name": "coach_please",
-      "instagram": "https://www.instagram.com/coach_please/",
-      "photo": "assets/works/DQDpt5bj8Sb.jpg",
-      "bio": "",
-      "tags": [
-        "企劃發想",
-        "拍攝執行",
-        "剪輯製作"
-      ],
-      "works": [
-        {
-          "title": "傳說中廣告血脈在誰的身體流淌...？",
-          "url": "https://www.instagram.com/reel/DQDpt5bj8Sb/",
-          "thumbnail": "assets/works/DQDpt5bj8Sb.jpg",
-          "video": "assets/videos/DQDpt5bj8Sb.mp4"
         }
       ]
     }
