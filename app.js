@@ -76,7 +76,8 @@
           <div class="profile__img">${photo(p)}</div>
           <div>
             <h1 class="profile__name">${esc(p.name)}</h1>
-            <p class="profile__bio">${esc(p.bio)}</p>
+            ${p.instagram ? `<a class="profile__ig" href="${esc(p.instagram)}" target="_blank" rel="noopener">@${esc(p.slug)} ↗</a>` : ""}
+            ${p.bio ? `<p class="profile__bio">${esc(p.bio)}</p>` : ""}
             <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
           </div>
         </div>

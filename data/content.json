@@ -2,9 +2,19 @@
   "site": {
     "brand": "VUCA",
     "titleZh": "人物作品集",
-    "titleEn": ["PEOPLE", "VIDEO PORTFOLIO"],
-    "services": ["企劃", "拍攝", "剪輯"],
-    "intro": ["為品牌與個人品牌打造高質感短影音，", "以人物為核心，放大故事與專業價值。"],
+    "titleEn": [
+      "PEOPLE",
+      "VIDEO PORTFOLIO"
+    ],
+    "services": [
+      "企劃",
+      "拍攝",
+      "剪輯"
+    ],
+    "intro": [
+      "為品牌與個人品牌打造高質感短影音，",
+      "以人物為核心，放大故事與專業價值。"
+    ],
     "contact": {
       "instagram": "https://www.instagram.com/jmlxch/",
       "email": "",
@@ -13,26 +23,311 @@
   },
   "people": [
     {
-      "slug": "person-a",
-      "name": "人物 A",
-      "photo": "",
-      "bio": "專業創作者，擅長以簡潔有力的敘事，呈現專業觀點與品牌價值。",
-      "tags": ["企劃發想", "拍攝執行", "剪輯製作"],
-      "stats": { "觀看表現": "", "互動表現": "", "轉換表現": "" },
+      "slug": "lyqing__",
+      "name": "lyqing__",
+      "instagram": "https://www.instagram.com/lyqing__/",
+      "photo": "assets/works/DeJaQEuBZCH.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
       "works": [
-        { "title": "專業觀點：產業趨勢解析", "url": "", "thumbnail": "" },
-        { "title": "創作者的工作日常", "url": "", "thumbnail": "" }
+        {
+          "title": "走進市場，聽聽大家最真實的聲音。",
+          "url": "https://www.instagram.com/reel/DeJaQEuBZCH/",
+          "thumbnail": "assets/works/DeJaQEuBZCH.jpg"
+        },
+        {
+          "title": "跑進城市，也跑進生活。🏃‍♂️",
+          "url": "https://www.instagram.com/reel/Dd3x_7lBssD/",
+          "thumbnail": "assets/works/Dd3x_7lBssD.jpg"
+        },
+        {
+          "title": "一個里，可以不只有傳統的里民活動。",
+          "url": "https://www.instagram.com/reel/Ddq9Q1dTSFd/",
+          "thumbnail": "assets/works/Ddq9Q1dTSFd.jpg"
+        },
+        {
+          "title": "對於地方發展而言，最重要的永遠是「能為鄉親帶來什麼。」不論來…",
+          "url": "https://www.instagram.com/reel/DdcxQ_EBfkZ/",
+          "thumbnail": "assets/works/DdcxQ_EBfkZ.jpg"
+        },
+        {
+          "title": "里動。里美。里安心",
+          "url": "https://www.instagram.com/reel/DdNp1IKhsSz/",
+          "thumbnail": "assets/works/DdNp1IKhsSz.jpg"
+        },
+        {
+          "title": "選里長初登板🔥",
+          "url": "https://www.instagram.com/reel/DdBjn2yBAOO/",
+          "thumbnail": "assets/works/DdBjn2yBAOO.jpg"
+        }
       ]
     },
     {
-      "slug": "person-b",
-      "name": "人物 B",
-      "photo": "",
-      "bio": "請在 data/content.json 填入人物介紹。",
-      "tags": ["企劃發想", "拍攝執行"],
-      "stats": { "觀看表現": "", "互動表現": "", "轉換表現": "" },
+      "slug": "a19901220168j",
+      "name": "a19901220168j",
+      "instagram": "https://www.instagram.com/a19901220168j/",
+      "photo": "assets/works/DeGyT_6A_kE.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
       "works": [
-        { "title": "作品標題", "url": "", "thumbnail": "" }
+        {
+          "title": "BMW iX3 發表會 EP.2 ⚡️",
+          "url": "https://www.instagram.com/reel/DeGyT_6A_kE/",
+          "thumbnail": "assets/works/DeGyT_6A_kE.jpg"
+        },
+        {
+          "title": "BMW 新世代革命正式降臨！✨",
+          "url": "https://www.instagram.com/reel/DeBpdXngDAf/",
+          "thumbnail": "assets/works/DeBpdXngDAf.jpg"
+        },
+        {
+          "title": "【M3 Competition 開箱日常 Ep.2】",
+          "url": "https://www.instagram.com/reel/DcN9GgdpsdK/",
+          "thumbnail": "assets/works/DcN9GgdpsdK.jpg"
+        },
+        {
+          "title": "大多數人，一定對於勞力士型號一堆數字",
+          "url": "https://www.instagram.com/reel/DGI0qBmy9bY/",
+          "thumbnail": "assets/works/DGI0qBmy9bY.jpg"
+        },
+        {
+          "title": "剛好片都還沒製作完成，發很久以前聊過手錶的",
+          "url": "https://www.instagram.com/reel/DGfrklVJTQt/",
+          "thumbnail": "assets/works/DGfrklVJTQt.jpg"
+        },
+        {
+          "title": "開著G87 M2在路上。",
+          "url": "https://www.instagram.com/reel/DJtF_RPJubK/",
+          "thumbnail": "assets/works/DJtF_RPJubK.jpg"
+        },
+        {
+          "title": "這一趟狗園，說起來對我有距離",
+          "url": "https://www.instagram.com/reel/DYt_6aKpR_b/",
+          "thumbnail": "assets/works/DYt_6aKpR_b.jpg"
+        },
+        {
+          "title": "曾經看過一本書，第一頁寫，好勝心是以生俱來的",
+          "url": "https://www.instagram.com/reel/DWtssHuiV32/",
+          "thumbnail": "assets/works/DWtssHuiV32.jpg"
+        },
+        {
+          "title": "大家看我說車這麼久，第一次知道",
+          "url": "https://www.instagram.com/reel/DWiqUXVCYgA/",
+          "thumbnail": "assets/works/DWiqUXVCYgA.jpg"
+        },
+        {
+          "title": "男人的終極夢想 — Porsche 911 GT3 RS",
+          "url": "https://www.instagram.com/reel/DVRO-7YiW2W/",
+          "thumbnail": "assets/works/DVRO-7YiW2W.jpg"
+        },
+        {
+          "title": "M2 CS｜真正的稀有物種",
+          "url": "https://www.instagram.com/reel/DTxsiedCZF2/",
+          "thumbnail": "assets/works/DTxsiedCZF2.jpg"
+        },
+        {
+          "title": "迎來70週年，品牌舉辦了全球巡迴的「穿越時區」展覽慶祝",
+          "url": "https://www.instagram.com/reel/DSoXxeDifo_/",
+          "thumbnail": "assets/works/DSoXxeDifo_.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ellie1688888",
+      "name": "ellie1688888",
+      "instagram": "https://www.instagram.com/ellie1688888/",
+      "photo": "assets/works/Ddv0wYDRTcd.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
+      "works": [
+        {
+          "title": "《來去鄉下睡一晚？》",
+          "url": "https://www.instagram.com/reel/Ddv0wYDRTcd/",
+          "thumbnail": "assets/works/Ddv0wYDRTcd.jpg"
+        },
+        {
+          "title": "《放山雞的抗體比較好？》",
+          "url": "https://www.instagram.com/reel/DdOWbcSzhYK/",
+          "thumbnail": "assets/works/DdOWbcSzhYK.jpg"
+        },
+        {
+          "title": "《今天帶大家去雞場做飛雞？》",
+          "url": "https://www.instagram.com/reel/Dc8U06WRq0Q/",
+          "thumbnail": "assets/works/Dc8U06WRq0Q.jpg"
+        },
+        {
+          "title": "《找雞？來今天帶你去》",
+          "url": "https://www.instagram.com/reel/DcqTWJZTs1-/",
+          "thumbnail": "assets/works/DcqTWJZTs1-.jpg"
+        },
+        {
+          "title": "《老娘活了40年教你殺價的秘訣》",
+          "url": "https://www.instagram.com/reel/Dcik6sjThW5/",
+          "thumbnail": "assets/works/Dcik6sjThW5.jpg"
+        },
+        {
+          "title": "《雞精/滴雞精怎麼挑？》",
+          "url": "https://www.instagram.com/reel/Dca2f19T1c6/",
+          "thumbnail": "assets/works/Dca2f19T1c6.jpg"
+        },
+        {
+          "title": "《從小跟雞長大，來教大家怎麼挑雞》",
+          "url": "https://www.instagram.com/reel/DcVs_VLzJeb/",
+          "thumbnail": "assets/works/DcVs_VLzJeb.jpg"
+        },
+        {
+          "title": "《偷吃被抓到去找雞？》",
+          "url": "https://www.instagram.com/reel/DcLZyruTN4t/",
+          "thumbnail": "assets/works/DcLZyruTN4t.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fjcu_gimc",
+      "name": "fjcu_gimc",
+      "instagram": "https://www.instagram.com/fjcu_gimc/",
+      "photo": "assets/works/Ddp19hjJjpz.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
+      "works": [
+        {
+          "title": "20秒介紹自己的課教什麼，教授們表示…比講課還難",
+          "url": "https://www.instagram.com/reel/Ddp19hjJjpz/",
+          "thumbnail": "assets/works/Ddp19hjJjpz.jpg"
+        },
+        {
+          "title": "只要你想，就來試試！",
+          "url": "https://www.instagram.com/reel/DdnwmcrJltJ/",
+          "thumbnail": "assets/works/DdnwmcrJltJ.jpg"
+        },
+        {
+          "title": "輔大大傳所面試的題目意想不到？",
+          "url": "https://www.instagram.com/reel/DdpstplJzDf/",
+          "thumbnail": "assets/works/DdpstplJzDf.jpg"
+        },
+        {
+          "title": "✨免費參加｜一日研究生體驗✨",
+          "url": "https://www.instagram.com/reel/DONhy7EiQMG/",
+          "thumbnail": "assets/works/DONhy7EiQMG.jpg"
+        },
+        {
+          "title": "傳播工作者都在談 AI和永續！",
+          "url": "https://www.instagram.com/reel/DOdlBe5iYzy/",
+          "thumbnail": "assets/works/DOdlBe5iYzy.jpg"
+        },
+        {
+          "title": "上班族距離研究好像很遠？No No No!",
+          "url": "https://www.instagram.com/reel/DP3xeLECTU8/",
+          "thumbnail": "assets/works/DP3xeLECTU8.jpg"
+        },
+        {
+          "title": "不是EMBA也能在拿碩士學位同時開副業💰",
+          "url": "https://www.instagram.com/reel/DSjHjDIiajp/",
+          "thumbnail": "assets/works/DSjHjDIiajp.jpg"
+        },
+        {
+          "title": "當輔大學生賺瘋！國外求職履歷都多看二眼！",
+          "url": "https://www.instagram.com/reel/DShrVO8Cfpt/",
+          "thumbnail": "assets/works/DShrVO8Cfpt.jpg"
+        },
+        {
+          "title": "碩專班學長姐大實話，大傳所沒有想像中那麼學術！",
+          "url": "https://www.instagram.com/reel/DRglxbzibD3/",
+          "thumbnail": "assets/works/DRglxbzibD3.jpg"
+        },
+        {
+          "title": "非傳播相關科系的你就是我們找的人！",
+          "url": "https://www.instagram.com/reel/DPvxoqBiQHp/",
+          "thumbnail": "assets/works/DPvxoqBiQHp.jpg"
+        },
+        {
+          "title": "唸私立研究所比較貴嗎？破解迷思🔨",
+          "url": "https://www.instagram.com/reel/DPvfNH1iROE/",
+          "thumbnail": "assets/works/DPvfNH1iROE.jpg"
+        },
+        {
+          "title": "這樣說，懂了沒？",
+          "url": "https://www.instagram.com/reel/DPbDXpkCUMy/",
+          "thumbnail": "assets/works/DPbDXpkCUMy.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "guo_strawberry",
+      "name": "guo_strawberry",
+      "instagram": "https://www.instagram.com/guo_strawberry/",
+      "photo": "assets/works/DcGMtjoRY7W.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
+      "works": [
+        {
+          "title": "錢放海外，就真的查不到嗎？",
+          "url": "https://www.instagram.com/reel/DcGMtjoRY7W/",
+          "thumbnail": "assets/works/DcGMtjoRY7W.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "stanford.barber.daniel",
+      "name": "stanford.barber.daniel",
+      "instagram": "https://www.instagram.com/stanford.barber.daniel/",
+      "photo": "assets/works/DQwZ7WMk6sG.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
+      "works": [
+        {
+          "title": "乾淨的頭皮，是健康髮質的第一步。",
+          "url": "https://www.instagram.com/reel/DQwZ7WMk6sG/",
+          "thumbnail": "assets/works/DQwZ7WMk6sG.jpg"
+        },
+        {
+          "title": "超白癡我在路上亂找一個人整理頭髮….",
+          "url": "https://www.instagram.com/reel/DQt7jQakyrj/",
+          "thumbnail": "assets/works/DQt7jQakyrj.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "coach_please",
+      "name": "coach_please",
+      "instagram": "https://www.instagram.com/coach_please/",
+      "photo": "assets/works/DQDpt5bj8Sb.jpg",
+      "bio": "",
+      "tags": [
+        "企劃發想",
+        "拍攝執行",
+        "剪輯製作"
+      ],
+      "works": [
+        {
+          "title": "傳說中廣告血脈在誰的身體流淌...？",
+          "url": "https://www.instagram.com/reel/DQDpt5bj8Sb/",
+          "thumbnail": "assets/works/DQDpt5bj8Sb.jpg"
+        }
       ]
     }
   ]

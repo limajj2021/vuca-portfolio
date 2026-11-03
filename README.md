@@ -32,6 +32,18 @@
 
 聯絡方式在 `site.contact`（`instagram`／`email`／`line`），留空即隱藏。
 
+## 批次匯入 IG 作品
+
+把 IG 連結（每行一個）存成 `links.txt`，執行：
+
+```bash
+python3 scripts/import_reels.py links.txt
+```
+
+腳本只讀 IG 官方公開嵌入頁（不需登入），會依發文帳號自動分到對應人物（沒有就新建）、
+以說明文字第一行當標題、下載封面到 `assets/works/`。已匯入的作品會略過，可重複執行。
+新建的人物 `name` 預設為 IG 帳號，請再手動改成中文名與介紹。
+
 ## 品牌
 
 `assets/logo.jpg` 為 VUCA 官方 Logo 原檔，請勿重製、改色或變形。
