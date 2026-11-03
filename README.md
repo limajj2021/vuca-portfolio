@@ -27,7 +27,7 @@
 | `slug` | 網址代號，英數與連字號，例：`#/p/wang-xiaoming` |
 | `photo` | 人物照，上傳到 `assets/people/`；留空則顯示名字縮寫 |
 | `works[].url` | IG 貼文／Reel 連結（`/p/`、`/reel/`、`/tv/` 皆可），點擊後以 IG 官方嵌入播放；留空顯示「即將上架」 |
-| `works[].thumbnail` | 封面圖（選填），建議 4:3 |
+| `works[].thumbnail` | 封面圖（選填），建議 4:5 直式 |
 | `stats` | 合作成果數字，值留空顯示「—」；整個物件刪掉則不顯示該區塊 |
 
 聯絡方式在 `site.contact`（`instagram`／`email`／`line`），留空即隱藏。
