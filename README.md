@@ -51,7 +51,7 @@ GitHub Pages 網站上限 1GB。每支影片約 4–12MB，約可放 150 支；�
 
 ## 品牌
 
-`assets/logo.jpg` 為 VUCA 官方 Logo 原檔，請勿重製、改色或變形。
+`assets/logo.jpg` 為 VUCA 官方 Logo 原檔，請勿重製、改色或變形。`assets/logo.png` 為同一檔案去除白底後的透明版（Logo 本體像素與色彩未更動），網站使用此檔。
 
 ## 本機預覽
 

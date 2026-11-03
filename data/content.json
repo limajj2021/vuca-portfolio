@@ -18,16 +18,21 @@
     "contact": {
       "instagram": "https://www.instagram.com/jmlxch/",
       "email": "",
-      "line": ""
+      "line": "https://lin.ee/UYclGrS"
     }
   },
   "people": [
     {
       "slug": "lyqing__",
-      "name": "lyqing__",
+      "name": "林猷青",
       "instagram": "https://www.instagram.com/lyqing__/",
+      "avatar": "assets/people/lyqing__.jpg",
       "photo": "assets/works/DeJaQEuBZCH.jpg",
-      "bio": "",
+      "industry": [
+        "#地方政治",
+        "#公共事務"
+      ],
+      "bio": "基隆義昭里里長參選人，用街訪與社區活動記錄地方真實的聲音。",
       "tags": [
         "企劃發想",
         "拍攝執行",
@@ -76,8 +81,13 @@
       "slug": "a19901220168j",
       "name": "a19901220168j",
       "instagram": "https://www.instagram.com/a19901220168j/",
+      "avatar": "assets/people/a19901220168j.jpg",
       "photo": "assets/works/DeGyT_6A_kE.jpg",
-      "bio": "",
+      "industry": [
+        "#汽車",
+        "#精品腕錶"
+      ],
+      "bio": "汽車與精品腕錶內容創作者，從新車發表到經典車款開箱。",
       "tags": [
         "企劃發想",
         "拍攝執行",
@@ -162,8 +172,13 @@
       "slug": "ellie1688888",
       "name": "ellie1688888",
       "instagram": "https://www.instagram.com/ellie1688888/",
+      "avatar": "assets/people/ellie1688888.jpg",
       "photo": "assets/works/Ddv0wYDRTcd.jpg",
-      "bio": "",
+      "industry": [
+        "#養雞場",
+        "#在地食材"
+      ],
+      "bio": "從小跟雞一起長大，用最直白的方式教你挑雞、挑雞精。",
       "tags": [
         "企劃發想",
         "拍攝執行",
@@ -222,10 +237,15 @@
     },
     {
       "slug": "fjcu_gimc",
-      "name": "fjcu_gimc",
+      "name": "輔大大傳所",
       "instagram": "https://www.instagram.com/fjcu_gimc/",
+      "avatar": "assets/people/fjcu_gimc.jpg",
       "photo": "assets/works/Ddp19hjJjpz.jpg",
-      "bio": "",
+      "industry": [
+        "#高等教育",
+        "#傳播"
+      ],
+      "bio": "輔仁大學大眾傳播學研究所，碩士班與碩專班招生系列影片。",
       "tags": [
         "企劃發想",
         "拍攝執行",
@@ -316,8 +336,13 @@
       "slug": "guo_strawberry",
       "name": "guo_strawberry",
       "instagram": "https://www.instagram.com/guo_strawberry/",
+      "avatar": "assets/people/guo_strawberry.jpg",
       "photo": "assets/works/DcGMtjoRY7W.jpg",
-      "bio": "",
+      "industry": [
+        "#財經",
+        "#稅務"
+      ],
+      "bio": "用 30 秒短影音拆解海外資產、CRS 等財稅議題。",
       "tags": [
         "企劃發想",
         "拍攝執行",
@@ -348,8 +373,13 @@
       "slug": "stanford.barber.daniel",
       "name": "stanford.barber.daniel",
       "instagram": "https://www.instagram.com/stanford.barber.daniel/",
+      "avatar": "assets/people/stanford.barber.daniel.jpg",
       "photo": "assets/works/DQwZ7WMk6sG.jpg",
-      "bio": "",
+      "industry": [
+        "#美髮",
+        "#頭皮護理"
+      ],
+      "bio": "髮型師，分享頭皮清潔與髮質保養的日常觀念。",
       "tags": [
         "企劃發想",
         "拍攝執行",

@@ -20,6 +20,12 @@
       ? `<img src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" class="${cls}">`
       : `<div class="mono">${esc(p.name.replace(/^人物\s*/, "").slice(0, 2))}</div>`;
 
+  const avatar = (p, cls = "avatar") =>
+    p.avatar ? `<img class="${cls}" src="${esc(p.avatar)}" alt="" loading="lazy">` : "";
+
+  const hashtags = (p, cls) =>
+    p.industry?.length ? `<p class="${cls}">${p.industry.map((t) => `<span>${esc(t)}</span>`).join("")}</p>` : "";
+
   const setActive = (name) => {
     document.querySelectorAll("[data-nav]").forEach((a) => a.classList.toggle("is-active", a.dataset.nav === name));
   };
@@ -43,7 +49,7 @@
             <p class="hero__services">${site.services.map(esc).join(" ・ ")}</p>
             <p class="hero__intro">${site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
           </div>
-          <div class="hero__media">${heroPerson ? `<img src="${esc(heroPerson.photo)}" alt="${esc(heroPerson.name)}">` : `<img class="hero__logo" src="assets/logo.jpg" alt="VUCA">`}</div>
+          <div class="hero__media">${heroPerson ? `<img src="${esc(heroPerson.photo)}" alt="${esc(heroPerson.name)}">` : `<img class="hero__logo" src="assets/logo.png" alt="VUCA">`}</div>
         </div>
         ${tabs("people")}
         <div class="people">
@@ -52,9 +58,14 @@
               (p) => `
             <a class="card" href="#/p/${encodeURIComponent(p.slug)}">
               <div class="card__img">${photo(p)}</div>
-              <div class="card__row">
-                <div class="card__meta"><h3 class="card__name">${esc(p.name)}</h3><span class="card__count">${p.works.length} 支作品</span></div>
-                <span class="arrow" aria-hidden="true">→</span>
+              <div class="card__body">
+                <div class="card__row">
+                  ${avatar(p)}
+                  <div class="card__meta"><h3 class="card__name">${esc(p.name)}</h3><span class="card__count">${p.works.length} 支作品</span></div>
+                  <span class="arrow" aria-hidden="true">→</span>
+                </div>
+                ${hashtags(p, "card__tags")}
+                ${p.bio ? `<p class="card__bio">${esc(p.bio)}</p>` : ""}
               </div>
             </a>`
             )
@@ -75,8 +86,12 @@
         <div class="profile">
           <div class="profile__img">${photo(p)}</div>
           <div>
-            <h1 class="profile__name">${esc(p.name)}</h1>
+            <div class="profile__head">
+              ${avatar(p, "avatar avatar--lg")}
+              <h1 class="profile__name">${esc(p.name)}</h1>
+            </div>
             ${p.instagram ? `<a class="profile__ig" href="${esc(p.instagram)}" target="_blank" rel="noopener">@${esc(p.slug)} ↗</a>` : ""}
+            ${hashtags(p, "profile__tags")}
             ${p.bio ? `<p class="profile__bio">${esc(p.bio)}</p>` : ""}
             <div class="tags">${(p.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
           </div>
@@ -119,9 +134,9 @@
   function renderContact() {
     const c = data.site.contact || {};
     const items = [
+      c.line && { label: "LINE", href: c.line, note: "線上諮詢" },
       c.instagram && { label: "Instagram", href: c.instagram, note: "私訊洽詢" },
       c.email && { label: "Email", href: `mailto:${c.email}`, note: c.email },
-      c.line && { label: "LINE", href: c.line, note: "加入好友" },
     ].filter(Boolean);
     app.innerHTML = `
       <section class="wrap contact">
@@ -187,6 +202,10 @@
     .then((json) => {
       data = json;
       document.getElementById("navServices").textContent = data.site.services.join("・");
+      // 有 LINE 就讓所有「合作洽詢」按鈕直接開 LINE 諮詢
+      if (data.site.contact?.line) {
+        document.querySelectorAll(".js-cta").forEach((a) => Object.assign(a, { href: data.site.contact.line, target: "_blank", rel: "noopener" }));
+      }
       window.addEventListener("hashchange", route);
       route();
     })

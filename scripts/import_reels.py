@@ -2,6 +2,7 @@
 """匯入 IG 作品連結到 data/content.json。
 
 用法：python3 scripts/import_reels.py links.txt
+      python3 scripts/import_reels.py --avatars   # 替缺大頭照的人物補抓
   links.txt 每行一個 IG 貼文／Reel 連結。
   依發文帳號分類到人物；封面下載到 assets/works/，影片壓成 720p 存到 assets/videos/。
   已匯入的作品會略過，只補齊缺少的標題或影片，可重複執行。
@@ -21,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTENT = ROOT / "data" / "content.json"
 WORKS_DIR = ROOT / "assets" / "works"
 VIDEOS_DIR = ROOT / "assets" / "videos"
+PEOPLE_DIR = ROOT / "assets" / "people"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
 URL_RE = re.compile(r"instagram\.com/(?:([\w.]+)/)?(p|reel|reels|tv)/([\w-]+)")
 
@@ -37,22 +39,50 @@ def parse_embed(code, kind):
     img = re.search(r'class="EmbeddedMediaImage"[^>]*src="([^"]+)"', page)
     cap = re.search(r'class="Caption">.*?</a>(.*?)(?:<div class="CaptionComments"|</div>)', page, re.S)
     vid = re.search(r'video_url\\+":\\+"(.*?)\\+"', page)
+    pic = re.search(r'profile_pic_url\\+":\\+"(.*?)\\+"', page)
     caption = ""
     if cap:
         text = re.sub(r"<br\s*/?>", "\n", cap.group(1))
         caption = html.unescape(re.sub(r"<[^>]+>", "", text)).strip()
-    video = ""
-    if vid:
-        # 嵌入頁內的 JSON 經過多層跳脫：\\\/ → /、\\u0026 → &
-        video = re.sub(r"\\+/", "/", vid.group(1))
-        video = re.sub(r"\\+u0026", "&", video)
-        video = html.unescape(video)
+    video = unescape_json_url(vid.group(1)) if vid else ""
     return {
         "username": user.group(1).strip() if user else None,
         "image": html.unescape(img.group(1)) if img else None,
         "caption": caption,
         "video": video,
+        "avatar": unescape_json_url(pic.group(1)) if pic else "",
     }
+
+
+def unescape_json_url(u):
+    # 嵌入頁內的 JSON 經過多層跳脫：\\\/ → /、\\u0026 → &
+    u = re.sub(r"\\+/", "/", u)
+    u = re.sub(r"\\+u0026", "&", u)
+    return html.unescape(u)
+
+
+def save_avatar(slug, url):
+    PEOPLE_DIR.mkdir(parents=True, exist_ok=True)
+    (PEOPLE_DIR / f"{slug}.jpg").write_bytes(get(url))
+    return f"assets/people/{slug}.jpg"
+
+
+def fill_avatars():
+    """替沒有大頭照的人物，從其第一支作品的嵌入頁抓發文帳號大頭照。"""
+    data = json.loads(CONTENT.read_text("utf-8"))
+    for p in data["people"]:
+        if p.get("avatar") or not p["works"]:
+            continue
+        m = URL_RE.search(p["works"][0]["url"])
+        try:
+            info = parse_embed(m.group(3), "reel" if m.group(2) in ("reel", "reels") else m.group(2))
+            if info["avatar"]:
+                p["avatar"] = save_avatar(p["slug"], info["avatar"])
+                print(f"大頭照 ✓ {p['slug']}")
+        except Exception as e:
+            print(f"{p['slug']} 大頭照失敗：{e}", file=sys.stderr)
+        time.sleep(1)
+    CONTENT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", "utf-8")
 
 
 def make_title(caption):
@@ -134,11 +164,19 @@ def main(path):
 
         person = people.get(username)
         if not person:
+            avatar = ""
+            if info["avatar"]:
+                try:
+                    avatar = save_avatar(username, info["avatar"])
+                except Exception as e:
+                    print(f"{username} 大頭照下載失敗：{e}", file=sys.stderr)
             person = {
                 "slug": username,
                 "name": username,
                 "instagram": f"https://www.instagram.com/{username}/",
+                "avatar": avatar,
                 "photo": thumb,
+                "industry": [],
                 "bio": "",
                 "tags": ["企劃發想", "拍攝執行", "剪輯製作"],
                 "works": [],
@@ -159,4 +197,7 @@ def main(path):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    if sys.argv[1] == "--avatars":
+        fill_avatars()
+    else:
+        main(sys.argv[1])
