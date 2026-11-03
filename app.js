@@ -41,7 +41,7 @@
             <h1 class="hero__en">${site.titleEn.map(esc).join("<br>")}</h1>
             <p class="hero__services">${esc(site.titleZh).split("").join(" ")}</p>
             <p class="hero__services">${site.services.map(esc).join(" ・ ")}</p>
-            <p class="hero__intro">${site.intro.map(esc).join("<br>")}</p>
+            <p class="hero__intro">${site.intro.map((l) => `<span>${esc(l)}</span>`).join("")}</p>
           </div>
           <div class="hero__media">${heroPerson ? `<img src="${esc(heroPerson.photo)}" alt="${esc(heroPerson.name)}">` : `<img class="hero__logo" src="assets/logo.jpg" alt="VUCA">`}</div>
         </div>
@@ -53,7 +53,7 @@
             <a class="card" href="#/p/${encodeURIComponent(p.slug)}">
               <div class="card__img">${photo(p)}</div>
               <div class="card__row">
-                <h3 class="card__name">${esc(p.name)}<span class="card__count">${p.works.length} 支作品</span></h3>
+                <div class="card__meta"><h3 class="card__name">${esc(p.name)}</h3><span class="card__count">${p.works.length} 支作品</span></div>
                 <span class="arrow" aria-hidden="true">→</span>
               </div>
             </a>`
