@@ -1,0 +1,39 @@
+{
+  "site": {
+    "brand": "VUCA",
+    "titleZh": "人物作品集",
+    "titleEn": ["PEOPLE", "VIDEO PORTFOLIO"],
+    "services": ["企劃", "拍攝", "剪輯"],
+    "intro": ["為品牌與個人品牌打造高質感短影音，", "以人物為核心，放大故事與專業價值。"],
+    "contact": {
+      "instagram": "https://www.instagram.com/jmlxch/",
+      "email": "",
+      "line": ""
+    }
+  },
+  "people": [
+    {
+      "slug": "person-a",
+      "name": "人物 A",
+      "photo": "",
+      "bio": "專業創作者，擅長以簡潔有力的敘事，呈現專業觀點與品牌價值。",
+      "tags": ["企劃發想", "拍攝執行", "剪輯製作"],
+      "stats": { "觀看表現": "", "互動表現": "", "轉換表現": "" },
+      "works": [
+        { "title": "專業觀點：產業趨勢解析", "url": "", "thumbnail": "" },
+        { "title": "創作者的工作日常", "url": "", "thumbnail": "" }
+      ]
+    },
+    {
+      "slug": "person-b",
+      "name": "人物 B",
+      "photo": "",
+      "bio": "請在 data/content.json 填入人物介紹。",
+      "tags": ["企劃發想", "拍攝執行"],
+      "stats": { "觀看表現": "", "互動表現": "", "轉換表現": "" },
+      "works": [
+        { "title": "作品標題", "url": "", "thumbnail": "" }
+      ]
+    }
+  ]
+}
