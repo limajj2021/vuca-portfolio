@@ -1,17 +1,28 @@
-# VUCA｜短影音企劃・拍攝・剪輯
+# VUCA｜你的行銷團隊
 
 官網首頁（`index.html`）＋影音作品集（[`works.html`](works.html)）。純靜態，部署在 GitHub Pages，網域 vuca.ca。
+
+## 首頁定位
+
+以**短影音月方案**為核心入口（含每月顧問會議），其他服務環繞在旁：
+
+- 帶人進來：Threads 經營、廣告投放、AEO
+- 把人接住：網頁／APP 開發（含資安）、LINE OA 建置、AI 客服機器人
+- 大型專案：老闆個人品牌全案、品牌形象片／廣告片、招募／招生影片
+- 教你的團隊：企業內訓、AI 應用教學
+
+不列價格、不做免費諮詢，一律 LINE 洽詢報價。
 
 ## 頁面結構
 
 | 檔案 | 內容 |
 |---|---|
-| `index.html` / `site.css` / `site.js` | 首頁：主標＋影片、作品、服務、合作流程、常見問題、聯絡（LINE／IG） |
+| `index.html` / `site.css` / `site.js` | 首頁：主標＋影片、服務地圖、作品、資安差異化、流程、FAQ、聯絡 |
 | `works.html` / `app.js` / `style.css` / `data/content.json` | 影音作品集（以下為其維護說明） |
 
-首頁「作品」區會自動讀 `data/content.json` 的人物，每人一格（封面用 `photo`，桌機滑過播第一支影片），點進去開作品集該人物頁。新增人物後首頁會自動出現，不用改首頁。
-
-首頁文案（服務、流程、FAQ）直接改 `index.html`。主視覺影片在 `.hero__video` 裡的 `<video src>`。
+- 服務地圖在 `index.html` 的 `.map` 區塊（中心 `.core`，四群 `.sat--a`～`.sat--d`），改文字直接改 HTML。
+- 首頁「作品」區自動讀 `data/content.json` 的人物，新增人物後首頁會自動出現。
+- 主視覺影片在 `.hero__video` 裡的 `<video src>`。
 
 ---
 
