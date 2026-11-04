@@ -3,42 +3,140 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VUCA｜人物作品集</title>
-  <meta name="description" content="VUCA 人物短影音作品集：企劃・拍攝・剪輯。">
-  <meta property="og:title" content="VUCA｜人物作品集">
+  <title>VUCA｜B2B 成交流程診斷與方案建置</title>
+  <meta name="description" content="信任層、承接層、業務支援層。診斷立項，按指標驗收。">
+  <meta property="og:title" content="VUCA｜B2B 成交流程診斷與方案建置">
+  <meta property="og:description" content="信任層、承接層、業務支援層。診斷立項，按指標驗收。">
   <meta property="og:image" content="https://vuca.ca/assets/logo.jpg">
   <meta property="og:url" content="https://vuca.ca/">
   <link rel="canonical" href="https://vuca.ca/">
   <link rel="icon" href="assets/logo.png">
+  <script>
+    // 舊版作品集的分享連結（#/p/…、#/contact）轉到 works.html
+    if (/^#\/(p|contact)/.test(location.hash)) location.replace("works.html" + location.hash);
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <header class="nav">
-    <a class="nav__brand" href="#/" aria-label="VUCA 首頁"><img src="assets/logo.png" alt="VUCA"></a>
-    <nav class="nav__links">
-      <a href="#/" data-nav="home">人物作品集</a>
-      <span class="nav__meta" id="navServices"></span>
-    </nav>
-    <a class="btn btn--sm js-cta" href="#/contact">合作洽詢 <span aria-hidden="true">→</span></a>
+  <header class="col">
+    <img src="assets/logo.png" alt="VUCA" class="logo">
   </header>
 
-  <main id="app" aria-live="polite"></main>
+  <main>
+    <section class="hero">
+      <div class="col">
+        <h1>B2B 成交流程診斷與方案建置</h1>
+        <p class="sub">信任層、承接層、業務支援層。診斷立項，按指標驗收。</p>
+        <p class="line3">系統化產能與快速迭代，讓方案建置與月度優化同步推進。</p>
+        <a class="btn" href="#apply">預約診斷</a>
+      </div>
+    </section>
 
-  <div class="cta-bar"><a class="btn btn--block js-cta" href="#/contact">合作洽詢 <span aria-hidden="true">→</span></a></div>
+    <section id="plans">
+      <div class="col">
+        <article class="plan">
+          <p class="tag">S1</p>
+          <h2>詢問轉化</h2>
+          <p>承接頁、投放素材、決策者觀點。按月迭代。</p>
+          <p class="kpi">驗收：詢問數、轉換率、素材週期。</p>
+          <a class="go" href="#apply">預約診斷</a>
+        </article>
+        <article class="plan">
+          <p class="tag">S2</p>
+          <h2>業務支援</h2>
+          <p>案例庫、FAQ 短片、提案頁、異議處理包。</p>
+          <p class="kpi">驗收：使用率、提案週期、成交週期。</p>
+          <a class="go" href="#apply">預約診斷</a>
+        </article>
+        <article class="plan">
+          <p class="tag">S3</p>
+          <h2>活動獲客</h2>
+          <p>現場快剪、直播切片、承接頁、會後跟進。</p>
+          <p class="kpi">限定 SLA：最快兩小時交片，預約制，超時依約賠付。</p>
+          <a class="go" href="#apply">預約診斷</a>
+        </article>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <img src="assets/logo.png" alt="VUCA" class="footer__logo">
-    <p>© <span id="year"></span> VUCA. All rights reserved.</p>
+    <section id="process">
+      <div class="col">
+        <h2 class="label">流程</h2>
+        <p class="steps"><span>付費診斷</span> → <span>方案立項</span> → <span>建置與月營運</span> → <span>季度覆盤</span></p>
+        <p class="fine">診斷費可抵建置；決策者參與；NDA 與變更機制。</p>
+      </div>
+    </section>
+
+    <section id="cases" hidden>
+      <div class="col">
+        <h2 class="label">案例</h2>
+        <div id="caseList"></div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="col">
+        <h2 class="label">常見問題</h2>
+        <dl class="faq">
+          <dt>是否需先診斷？</dt><dd>是，費用可抵建置。</dd>
+          <dt>是否受理單項？</dt><dd>以方案立項為主，單項依條件評估。</dd>
+          <dt>兩小時交片通用嗎？</dt><dd>否，限活動方案。</dd>
+          <dt>決策者需參與嗎？</dt><dd>是。</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="apply">
+      <div class="col">
+        <h2 class="label">預約診斷</h2>
+        <form id="form" novalidate>
+          <label>公司／行業
+            <input name="company" type="text" autocomplete="organization" required>
+          </label>
+          <label>卡點層級
+            <select name="layer">
+              <option value="">請選擇</option>
+              <option>信任層</option>
+              <option>承接層</option>
+              <option>業務支援層</option>
+              <option>不確定</option>
+            </select>
+          </label>
+          <label>決策者職稱
+            <input name="decision" type="text" autocomplete="off">
+          </label>
+          <label>期望時程
+            <select name="timeline">
+              <option value="">請選擇</option>
+              <option>一個月內</option>
+              <option>一至三個月</option>
+              <option>三個月以上</option>
+            </select>
+          </label>
+          <label>預算區間
+            <select name="budget">
+              <option value="">請選擇</option>
+              <option>尚未編列</option>
+              <option>10 萬以下</option>
+              <option>10–30 萬</option>
+              <option>30–100 萬</option>
+              <option>100 萬以上</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">預約診斷</button>
+        </form>
+        <div id="result" aria-live="polite" hidden></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="col">
+    <img src="assets/logo.png" alt="VUCA" class="logo logo--sm">
+    <p>© <span id="year"></span> VUCA <a href="works.html">影音作品</a></p>
   </footer>
 
-  <dialog class="player" id="player">
-    <button class="player__close" type="button" aria-label="關閉">×</button>
-    <div class="player__frame" id="playerFrame"></div>
-  </dialog>
-
-  <script src="app.js"></script>
+  <script src="site.js"></script>
 </body>
 </html>

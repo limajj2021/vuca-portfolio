@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VUCA｜影音作品</title>
+  <meta name="description" content="VUCA 人物短影音作品集：企劃・拍攝・剪輯。">
+  <meta property="og:title" content="VUCA｜影音作品">
+  <meta property="og:image" content="https://vuca.ca/assets/logo.jpg">
+  <meta property="og:url" content="https://vuca.ca/works.html">
+  <link rel="canonical" href="https://vuca.ca/works.html">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="nav__brand" href="./" aria-label="VUCA 首頁"><img src="assets/logo.png" alt="VUCA"></a>
+    <nav class="nav__links">
+      <a href="#/" data-nav="home">人物作品集</a>
+      <span class="nav__meta" id="navServices"></span>
+    </nav>
+    <a class="btn btn--sm js-cta" href="#/contact">合作洽詢 <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <div class="cta-bar"><a class="btn btn--block js-cta" href="#/contact">合作洽詢 <span aria-hidden="true">→</span></a></div>
+
+  <footer class="footer">
+    <img src="assets/logo.png" alt="VUCA" class="footer__logo">
+    <p>© <span id="year"></span> VUCA. All rights reserved.</p>
+  </footer>
+
+  <dialog class="player" id="player">
+    <button class="player__close" type="button" aria-label="關閉">×</button>
+    <div class="player__frame" id="playerFrame"></div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

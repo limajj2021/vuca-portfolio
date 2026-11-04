@@ -1,4 +1,30 @@
-# VUCA｜人物作品集
+# VUCA｜B2B 成交流程診斷與方案建置
+
+顧問名片式官網（`index.html`，單欄、無大圖、無動效）。舊版人物影音作品集保留在 [`works.html`](works.html)。純靜態，部署在 GitHub Pages，網域 vuca.ca。
+
+## 頁面結構
+
+| 檔案 | 內容 |
+|---|---|
+| `index.html` / `site.css` / `site.js` | 首頁：主標、三個方案、流程、案例、FAQ、預約診斷表單 |
+| `data/cases.json` | 案例資料。空陣列時整段不顯示 |
+| `works.html` / `app.js` / `style.css` / `data/content.json` | 影音作品集（以下為其維護說明） |
+
+### 新增案例
+
+在 `data/cases.json` 加一筆即可顯示，欄位對應「行業｜卡點｜介入｜指標（前→後）｜結論與限制」：
+
+```json
+[{ "industry": "", "pain": "", "action": "", "metric": "", "note": "" }]
+```
+
+### 預約診斷表單
+
+不儲存資料。公司／行業必填；決策者職稱與預算區間**都有填**才顯示 LINE 預約入口（並複製摘要），任一未填只顯示「將依案件條件評估」。
+
+---
+
+## 影音作品集（works.html）
 
 以人物分類的短影音作品集網站。純靜態（HTML／CSS／JS），部署在 GitHub Pages，無需 build。
 
